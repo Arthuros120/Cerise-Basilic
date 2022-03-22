@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
+
+    
+    <link href={% static 'css/header.css' %} rel="stylesheet" />
+    <link href={% static 'css/fonts.css' %} rel="stylesheet" />
+    <link href={% static 'css/base.css' %} rel="stylesheet" />
+
+    <link rel="shortcut icon" href={% static 'img/favicon.png' %}>
+
+    {% block style %}{% endblock %}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    {% block script %}{% endblock %}
+
+    <title>Cerise & Basilic</title>
+
+  </head>
+
+  <body>
+
+    <header>
+
+      <div class="logo">
+        <a href={% url 'home' %}><img src={% static 'img/logo.jpg' %} alt="logo" /></a>
+      </div>
+
+      <nav>
+
+        <ul>
+
+          <li><a class="button" href="{% url 'actu' %}">ACTUALITÉS</a></li>
+          <li><a class="button" href={% url 'produits' %}>PRODUITS</a></li>
+          <li><a class="button" href={% url 'equipe' %}>ÉQUIPE</a></li>
+          <li><a class="button" href="{% url 'contact' %}">CONTACT</a></li>
+
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+  </body>
+
+</html>

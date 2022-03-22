@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}<link href="{% static 'css/index.css' %}" rel="stylesheet" />{% endblock %}
+    
+{% block content %}
+
+    <main>
+        <div class="contain">
+            <div class="titre">
+                <h1>Cerise & Basilic</h1>
+                <h3>Votre primeur à Morlaix ! Fruits et légumes, fromages à la coupe, toujours en privilégiant les produits et producteurs locaux et français 🇫🇷.</h3>
+            </div>
+            <div class="line">
+                <hr>
+            </div>
+            <div class="grid">
+                <div class="card">
+                    <img src="{% static 'img/image1.jpg' %}">
+                    <div class="text">
+                        <h2>DES PRODUITS DE QUALITE</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="{% static 'img/image2.jpg' %}">
+                    <div class="text">
+                        <h2>DE SUPERBES CREATIONS</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

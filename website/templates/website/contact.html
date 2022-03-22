@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+
+    <link href={% static 'css/contact.css' %} rel="stylesheet" />
+
+{% endblock %}
+
+{% block content %}
+
+<div class="info">
+    <h2>Addresse : </h2>
+    <p>Rdpt de la Vge Noire, 29600 Morlaix</p>
+    <h2>Horaires : </h2> 
+      <p class="p">
+        Lundi    &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔ &#8232 &#8232
+        09:00 - 19:00 
+      </p>
+      <p class="p">
+        Mardi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 ➔ &#8232 &#8232
+        09:00 - 19:00 
+      </p>
+      <p class="p">
+        Mercredi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔  &#8232 &#8232
+        09:00 - 19:00 
+      </p>
+      <p class="p">
+        Jeudi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔  &#8232 &#8232
+        09:00 - 19:00 
+      </p>
+      <p class="p">
+        Vendredi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔  &#8232 &#8232
+        09:00 - 19:00 
+      </p>
+      <p class="p">
+        Samedi  &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 ➔  &#8232 &#8232
+        09:00 - 19:00 
+      </p>
+      <p>
+        Dimanche  &#8232 &#8232 &#8232 &#8232 &#8232  &#8232➔  &#8232 &#8232
+        <span class="rouge">FERMÉ</span>
+      </p>
+    <h2>Téléphone : </h2>
+    <p>02 98 61 06 92</p>
+  </div>
+  <div class="carte">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10555.48730149186!2d-3.830802!3d48.593153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51f06c17e20482f1!2sCerise%20et%20basilic%20fruits%20et%20l%C3%A9gumes!5e0!3m2!1sfr!2sfr!4v1647874303015!5m2!1sfr!2sfr" width="800" height="600" style="border:0;padding-top: 150px;" loading="lazy"></iframe>
+  </div>
+  <div class="contact" id="contact">
+    <div class="form-contact">
+      <form class="input-area">
+        <label>Adresse email *</label>
+        <div class="input-content">
+          <input
+            class="input-text input-max"
+            id="email"
+            name="email"
+            required
+            autocomplete="on"
+            autocapitalize="off"
+            placeholder="jeanpierre@orange.fr"
+            type="email"
+            form="contact-formulaire"
+          />
+          <img
+            class="icon icon-input"
+            alt="Icones représentant le status"
+          />
+        </div>
+        <p class="text-input">Hint or Error Message</p>
+      </form>
+      <form class="input-area">
+        <label>Titre du message *</label>
+        <div class="input-content">
+          <input
+            class="input-text input-max"
+            id="title"
+            name="title"
+            required
+            autocomplete="off"
+            autocapitalize="sentences"
+            type="text"
+            placeholder="À propos..."
+            form="contact-formulaire"
+          />
+          <img
+            class="icon icon-input"
+            alt="Icones représentant le status"
+          />
+        </div>
+        <p class="text-input">Hint or Error Message</p>
+      </form>
+      <form class="input-area">
+        <label>Votre message *</label>
+        <div class="input-content">
+          <textarea
+            class="input-text input-max"
+            name="mess"
+            id="mess"
+            autocapitalize="sentences"
+            autocomplete="off"
+            required
+            spellcheck="true"
+            wrap="hard"
+            placeholder="Votre message..."
+            type="text"
+            form="contact-formulaire"
+            style="resize: none;"
+          ></textarea>
+          <img
+            class="icon icon-input"
+            alt="Icones représentant le status"
+          />
+        </div>
+        <p class="text-input">Hint or Error Message</p>
+      </form>
+      <div class="boutton">
+        <input type="submit" class="button primary medium" value="Envoyer" >
+      </div>
+      </form>
+    </div>
+</div>
+
+{% endblock content %}

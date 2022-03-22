@@ -1,0 +1,291 @@
+*,
+html {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  max-width: 1920px;
+}
+
+body {
+    --text-color : black;
+    --errorRed : red;
+    --active: #25783f ;
+}
+
+/* Button */
+
+.text-button {
+  color: blue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  font-family: var(--main-font);
+  transition: all ease-in-out 125ms;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+/** Input */
+
+label,
+.text-input {
+  font-family: var(--main-font);
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 19.92px;
+  color: var(--text-color);
+}
+
+p.text-input {
+  font-family: "Inter", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13.31px;
+  color: var(--text-color);
+}
+
+input,
+select,
+textarea {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+/** Input */
+
+input,
+select,
+textarea {
+  background-color: white;
+  transition: 125ms;
+  border-radius: 4px;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  caret-color: gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 12px;
+  caret-color: gray;
+  outline: none;
+  height: 59px;
+}
+
+input:enabled:hover,
+select:hover,
+textarea:hover {
+  border: 2px solid var(--active);
+}
+
+input:enabled:focus,
+select:focus,
+textarea:focus {
+  border: 2px solid var(--active);
+}
+
+input:enabled:invalid,
+select:enabled:invalid,
+textarea:enabled:invalid {
+  border: 2px solid var(--errorRed);
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled] {
+  background-color: black;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.input-area > label {
+  padding-bottom: 6px;
+}
+
+.input-area:focus-within > label {
+  color: var(--active);
+}
+
+.input-area:invalid > .input-content > img,
+.input-area:invalid > p {
+  visibility: visible;
+}
+
+.input-area > p {
+  visibility: hidden;
+}
+
+.input-area[disabled] > .input-content > img {
+  content: url("/asset/icons/lock.svg");
+}
+
+.input-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.icon-input {
+  padding-left: 8px;
+  content: url("/asset/icons/warn.svg");
+  visibility: hidden;
+}
+
+
+.contact > hr {
+    width: 80%;
+    height: 1px;
+  
+  }
+  
+  .contact > h2 {
+    margin-top: 44px;
+    margin-bottom: 44px;
+  }
+  
+  .contact {
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 167px;
+  }
+  
+  .form-contact {
+    margin-top: 120px;
+    max-width: 1134px;
+  }
+  
+  .form-contact > * {
+    margin-bottom: 24px;
+  }
+  
+  .identity-contact {
+    display: flex;
+    flex-direction: row;
+    width: 1134px;
+  }
+  
+  #civ-select {
+    width: 261px;
+  }
+  
+  .civ-select {
+    padding-right: 24px;
+  }
+  
+  #name {
+    width: 801px;
+  }
+  
+  .input-max {
+    width: 100%;
+  }
+  
+  #mess {
+    height: 230px;
+    padding-right: 612px;
+    padding-left: 12px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+  
+  .contenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+    padding: 1vh 2vw;
+  }
+
+  .info {
+    padding-top: 100px;
+    margin: 0 auto;
+  }
+
+  .info p {
+    padding-left: 30px;
+  }
+
+  .info h2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .rouge {
+    color:var(--errorRed);
+  }
+  
+
+
+  /* Button */
+
+  .contact_me > form > .boutton input {
+    width: 130px;
+    height: 70px;
+    border-radius: 32px;
+}
+
+button.medium,
+.button.medium {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+button.primary,
+.button.primary {
+  background: white;
+  color: black;
+  border: 10 ;
+}
+
+.contact_me input {
+  width: 1134px;
+  height: 59px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border: 1px solid #949494;
+  box-sizing: border-box;
+  border-radius: 4px;
+  order: 0;
+}
+
+button,
+.button {
+  border-radius: 40px;
+  transition: all ease-in-out 125ms;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+
+.contenu > .contact > .form-contact > .boutton input {
+  padding: 10px 20px 10px 20px;
+}
+
+.contenu > .contact > .form-contact > .boutton input:hover {
+  background-color: var(--active);
+  color: white;
+}
+
+.contenu > .info > .p {
+  padding-bottom: 10px;
+}
+
+* {
+  background: none;
+}

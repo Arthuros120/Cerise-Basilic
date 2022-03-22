@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+
+    <link href={% static 'css/produit.css' %} rel="stylesheet" />
+    <link href={% static 'css/modal.css' %} rel="stylesheet" />
+
+{% endblock %}
+
+{% block script %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src={% static 'js/subnav.js' %}></script>
+    <script src={% static 'js/defillement.js' %}></script> 
+    <script 
+        src={% static 'js/modals.js' %} 
+        defer
+    >
+    </script>
+    <script 
+        src={% static 'js/scroll.js' %} 
+        defer
+    >
+    </script>
+
+{% endblock %}
+
+{% block content %}
+
+    <button onclick="topFunction()" id="ScrollBtn" title="Go to top">↑</button>
+
+
+    <!-- Spinner Boostrap -->
+    <!-- TODO: a Changé -->
+
+    {% comment %}  <div class="text-center">
+        <div class"spinner-border" role="status" id="spinner"></div>
+    </div> {% endcomment %}
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+
+            <div class="modal-body" id="modal-body">
+
+            {% comment %}Injected Code{% endcomment %}
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="subnav" id="sc">
+        <nav>
+            <ul>
+                {% for categorie, CATEGORIE in categories.items  %}
+                    <li><a href="#id{{ categorie }}">{{ CATEGORIE }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
+
+    <div class="contain">
+
+        {% for categorie, produits in inv.items %}
+
+            <div class="{{ categorie }}" id="id{{ categorie }}">
+
+                <h2>{{ categorie }}</h2>
+
+                <div class="grid">
+
+                    {% for produit in produits %}
+
+                        <div class="card">
+
+                            <img 
+                                class="img-product trigger"
+                                src="/upload/{{ produit.image }}" 
+                                alt="Image du produit" 
+                                id="myBtn"
+                                data-name="{{ produit.name }}"
+                                data-desc="{{ produit.description }}" 
+                                data-price="{{ produit.price }}"
+                                data-unite="{{ produit.unite }}"
+                                data-dispo="{{ produit.disponibile }}"
+                                data-static="{% static '' %}"
+                            >
+
+                            <div class="desc">
+
+                                <h3>{{ produit.name }}</h3>
+
+                                <p>{{ produit.price }}€ / {{ produit.unite }}</p>
+
+                            </div>
+
+                            <div 
+                                class="overlay trigger {{ produit.disponibile }}" 
+                                id="myBtn"
+                                src="/upload/{{ produit.image }}" 
+                                data-name="{{ produit.name }}"
+                                data-desc="{{ produit.description }}" 
+                                data-price="{{ produit.price }}"
+                                data-unite="{{ produit.unite }}"
+                                data-dispo="{{ produit.disponibile }}"
+                                data-static="{% static '' %}"
+                            >
+                                <div class="text {{ produit.disponibile }}" id="myBtn">Non disponible</div>
+                            </div>
+
+                        </div>
+                        
+                    {% endfor %}
+
+                </div>
+
+            </div>
+
+        {% endfor %}
+    
+    </div>
+
+{% endblock %}

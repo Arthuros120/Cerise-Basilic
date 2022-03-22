@@ -1,0 +1,81 @@
+* {
+    background: none;
+}
+
+.contain {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.contain > .haut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.contain > .haut > h1 {
+    font-size: 4vw;
+    color: var(--vargreen);
+}
+
+.contain > .haut > img {
+    width: 75vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 6vh;
+    width: 90%;
+    border: none;
+    height: 1px;
+    background-color: black;
+}
+
+.contain > .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(450px,1fr));
+    padding: 2vh ;
+    gap: 4vh;
+    margin-top: 4vh;
+}
+
+.contain > .grid > .card  {
+    border: 2px solid #AAAAAA;
+    width: 30vw;
+    height: 80vh;
+
+    display: grid;
+    grid-template-rows: 75% 25%;
+    grid-template-columns: 1fr;
+    border-radius: 2vh;
+}
+
+.contain >.grid > .card > .haut > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 1.8vh 1.8vh 0 0;
+}
+
+.contain >.grid > .card > .bas > .text {
+    margin: 2vh;
+    text-align: justify;
+}
+
+.contain > .grid > .card > .bas > .text > h2 {
+    font-size: 2vw;
+}
+
+.contain > .grid > .card > .bas > .text > p {
+    font-size: 1.2vw;
+}
+

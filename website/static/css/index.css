@@ -1,0 +1,91 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: rgb(250, 250, 250);
+    gap: 45vh;
+    margin-top: 10vh;
+}
+
+.grid > .card {
+    width: 100%;
+    height: 20vh;
+    border-radius: 10px;
+    /* background: rgba(255, 255, 255, 0.1);  */  
+    background-color: red;
+    position: relative;
+}
+
+.grid > .shadow {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.grid > .card > img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.grid > .card > .text {
+    position: absolute;
+    background: #ffffff;
+    /* transform: translate(-50%,-50%); */
+    left:50%;
+    top: 200%;
+    padding: 2vh;
+    border-radius: 10px;
+}
+
+.grid > .card > .text > h2 {
+    font-size: 3vw;
+}
+
+main {
+    margin-top: 6vh;
+    background-color: rgb(250, 250, 250);
+}
+
+main > .contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 50vh;
+}
+
+main > .contain > .titre {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 5vh;
+    gap: 1vh;
+    margin-bottom: 4vh;
+    background-color: rgb(250, 250, 250);
+}
+
+main > .contain > .titre > h1 {
+   font-size: 7vw;
+   display: flex;
+   justify-content: center;
+   font-family: 'Allura';
+   background-color: rgb(250, 250, 250);
+   color: #104421
+}
+
+main > .contain > .titre > h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3vw;
+    background-color: rgb(250, 250, 250);
+}
+
+main > .contain > .line {
+    display: flex;
+    justify-content: center;
+}
+
+main > .contain > .line > hr {
+    border: 0;
+    background-color: #303030;
+    height: 1px;
+    width: 80%;
+}

@@ -55,7 +55,7 @@
         <nav>
             <ul>
                 {% for categorie, CATEGORIE in categories.items  %}
-                    <li><a href="#id{{ categorie }}">{{ CATEGORIE }}</a></li>
+                    <li><a class="{{ categorie }}" href="#id{{ categorie }}">{{ CATEGORIE }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
@@ -75,43 +75,75 @@
 
                         <div class="card">
 
-                            <img 
-                                class="img-product trigger"
-                                src="/upload/{{ produit.image }}" 
-                                alt="Image du produit" 
-                                id="myBtn"
-                                data-name="{{ produit.name }}"
-                                data-desc="{{ produit.description }}" 
-                                data-price="{{ produit.price }}"
-                                data-unite="{{ produit.unite }}"
-                                data-dispo="{{ produit.disponibile }}"
-                                data-static="{% static '' %}"
-                            >
+                            {% if produit.disponibile %}
+
+                                <img 
+                                    class="img-product trigger"
+                                    src="/upload/{{ produit.image }}" 
+                                    alt="Image du produit" 
+                                    id="myBtn"
+                                    data-name="{{ produit.nom }}"
+                                    data-desc="{{ produit.description }}" 
+                                    data-price="{{ produit.prix }}"
+                                    data-unite="{{ produit.unite }}"
+                                    data-dispo="{{ produit.disponibile }}"
+                                    data-static="{% static '' %}"
+                                >   
+
+                            {% else %}
+
+                                <img 
+                                    class="img-product trigger"
+                                    src="/upload/{{ produit.image }}" 
+                                    alt="Image du produit" 
+                                    id="myBtn"
+                                >
+
+                            {% endif %}
 
                             <div class="desc">
 
-                                <h3>{{ produit.name }}</h3>
+                                <h3>{{ produit.nom }}</h3>
 
-                                <p>{{ produit.price }}€ / {{ produit.unite }}</p>
+                                <p>{{ produit.prix }}€ / {{ produit.unite }}</p>
 
                             </div>
 
-                            <div 
-                                class="overlay trigger {{ produit.disponibile }}" 
-                                id="myBtn"
-                                src="/upload/{{ produit.image }}" 
-                                data-name="{{ produit.name }}"
-                                data-desc="{{ produit.description }}" 
-                                data-price="{{ produit.price }}"
-                                data-unite="{{ produit.unite }}"
-                                data-dispo="{{ produit.disponibile }}"
-                                data-static="{% static '' %}"
-                            >
-                                <div class="text {{ produit.disponibile }}" id="myBtn">Non disponible</div>
-                            </div>
+                            {% if not produit.disponibile %}
+
+                                <div 
+                                    class="overlay trigger {{ produit.disponibile }}" 
+                                    id="myBtn"
+                                    src="/upload/{{ produit.image }}" 
+                                    data-name="{{ produit.nom }}"
+                                    data-desc="{{ produit.description }}" 
+                                    data-price="{{ produit.prix }}"
+                                    data-unite="{{ produit.unite }}"
+                                    data-dispo="{{ produit.disponibile }}"
+                                    data-static="{% static '' %}"
+                                >
+
+                                    <div 
+                                        class="text {{ produit.disponibile }}" 
+                                        id="myBtn"
+                                        src="/upload/{{ produit.image }}" 
+                                        data-name="{{ produit.nom }}"
+                                        data-desc="{{ produit.description }}" 
+                                        data-price="{{ produit.prix }}"
+                                        data-unite="{{ produit.unite }}"
+                                        data-dispo="{{ produit.disponibile }}"
+                                        data-static="{% static '' %}"
+                                    >
+
+                                        Non disponible
+
+                                    </div>
+                                </div> 
+
+                            {% endif %}
 
                         </div>
-                        
+
                     {% endfor %}
 
                 </div>

@@ -28,8 +28,8 @@ class Produit(models.Model):
         (LITRE, 'Litre'),
         (UNITE, 'Unite'),
     ]
-    
-    name = models.CharField(max_length=50)
+
+    nom = models.CharField(max_length=50)
     
     categorie = models.CharField(max_length=3, choices=CATEGORIES_CHOICE, default=LEGUME,)
 
@@ -37,7 +37,7 @@ class Produit(models.Model):
     
     description = models.CharField(max_length=100)
 
-    price = models.FloatField(max_length=4)
+    prix = models.FloatField(max_length=4 )
     
     unite = models.CharField(max_length=2, choices=UNITE_CHOICE, default=KILOGRAM,)
     
@@ -48,9 +48,9 @@ class Produit(models.Model):
 
 class Post(models.Model):
     
-    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    auteur = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     
-    title = models.CharField(max_length=200)
+    titre = models.CharField(max_length=200)
     
     text = models.TextField()
     

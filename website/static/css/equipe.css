@@ -46,6 +46,7 @@
     padding: 2vh ;
     gap: 4vh;
     margin-top: 4vh;
+    justify-items: center;
 }
 
 .contain > .grid > .card  {
@@ -57,6 +58,7 @@
     grid-template-rows: 75% 25%;
     grid-template-columns: 1fr;
     border-radius: 2vh;
+    justify-self: center;
 }
 
 .contain >.grid > .card > .haut > img {
@@ -78,4 +80,3 @@
 .contain > .grid > .card > .bas > .text > p {
     font-size: 1.2vw;
 }
-

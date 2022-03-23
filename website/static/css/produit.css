@@ -219,3 +219,57 @@
 #ScrollBtn:hover {
     background-color: #1a8618;
 }
+.contain > .Fruits > h2 {
+    color: rgb(226, 30, 30);
+}
+
+.contain > .Legumes > h2 {
+    color: var(--vargreen)
+}
+
+.contain > .Fromages > h2 {
+    color: rgb(214, 214, 54);
+}
+
+.contain > .Charcuteries > h2 {
+    color: rgb(192, 130, 140);
+}
+
+.contain > .Épicerie > h2 {
+    color: rgb(124, 34, 34);
+}
+
+.subnav > nav > ul > li > a {
+    background-color: #3e3f44;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.6vw 1vw;
+    border-radius: 1vh;
+    border: 1px solid #ffffff;
+    transition: background-color 330ms ease-in-out;
+}
+
+.subnav > nav > ul > li > .Fruits:hover {
+    background-color: rgb(226, 30, 30);
+    transition: background-color 330ms ease-in-out;
+}
+
+.subnav > nav > ul > li > .Legumes:hover {
+    background-color: var(--vargreen);
+    transition: background-color 330ms ease-in-out;
+}
+
+.subnav > nav > ul > li > .Fromages:hover {
+    background-color: rgb(214, 214, 54);
+    transition: background-color 330ms ease-in-out;
+}
+
+.subnav > nav > ul > li > .Charcuteries:hover {
+    background-color: rgb(192, 130, 140);
+    transition: background-color 330ms ease-in-out;
+}
+
+.subnav > nav > ul > li > .Épicerie:hover {
+    background-color: rgb(124, 34, 34);
+    transition: background-color 330ms ease-in-out;
+}

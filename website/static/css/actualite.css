@@ -3,6 +3,7 @@
     justify-content: center;
     background:none;
     margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .contain > .grid {
@@ -18,17 +19,13 @@
     grid-template-rows: 35% 65%;
     width: 35vw;
     height: 70vh;
-    border: 1px solid;
+    border: 2px solid #AAAAAA;
     border-radius: 2vh;
     
 }
 
 .contain > .grid > .box > .haut {
     border-radius: 2vh;
-}
-
-.contain > .grid > .box > .haut > hr {
-    
 }
 
 .contain > .grid > .box > .haut > img {
@@ -38,36 +35,37 @@
     border-radius: 2vh 2vh 0 0;
 }
 
+.contain > .grid > .box > .bas {
+    background-color: rgb(240, 233, 233);
+    border-radius: 0 0 2vh 2vh;
+}
+
 .contain > .grid > .box > .bas > .desc {
     display: flex;
     padding: 5% 10%;
     flex-direction: column;
     gap: 2vh;
-    background: none;
+    background-color: rgb(240, 233, 233);
 }
 
 .contain > .grid > .box > .bas > .desc > h2 {
     font-size: 2vw;
-    background-color: rgb(231, 231, 231);
-    color:var(--vargreen)
+    color:var(--vargreen);
+    background-color: rgb(240, 233, 233);
 }
 
 .contain > .grid > .box > .bas > .desc > p {
     font-size: 1vw;
-    background-color: rgb(231, 231, 231);
     text-align: justify;
+    background-color: rgb(240, 233, 233);
 }
 
 
-.contain > .grid > .box > .bas {
-    background-color: rgb(243, 236, 236);
-    border-radius: 0 0 2vh 2vh;
-}
 
 .contain > .sidediv {
     width: 25vw;
     height: 40vh;
-    background-color: rgb(211,211,211);
+    background-color: rgb(240, 233, 233);
     border-radius: 2vh;
     box-shadow: rgb(0, 0, 0) 0px 20px 30px -10px;
     position: fixed;
@@ -77,17 +75,20 @@
 }
 
 .contain > .sidediv > .content {
-    background-color: rgb(211,211,211);
+    background-color: rgb(240, 233, 233);
+}
+
+.contain > .sidediv > .content > .titre {
+    background-color: rgb(240, 233, 233);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin: 3vh;
     gap: 2vh;
 }
 
-.contain > .sidediv > .content > h2 {
-    background-color: rgb(211,211,211);
+.contain > .sidediv > .content > .titre  > h2 {
+    background-color: rgb(240, 233, 233);
     font-size: 2vw;
     color:var(--vargreen);
 }
@@ -95,27 +96,32 @@
 .contain > .sidediv > .content > ul {
     display: flex;
     flex-direction: column;
+    margin: 0 30%;
     gap: 1vh;
-    list-style-type: none;
-    background-color: rgb(211,211,211);
+    background-color: rgb(240, 233, 233);
+    list-style-type:square;
 }
 
 .contain > .sidediv > .content > ul > li > a {
     text-decoration: none;
     color: black;
-    background-color: rgb(211,211,211);
+    background-color: rgb(240, 233, 233);
     font-size: 1.5vw;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    text-align: left;
     transform: scale(1);
     transition: color 330ms ease-in-out, transform 330ms ease-in-out;
 }
 
 .contain > .sidediv > .content > ul > li {
-    background-color: rgb(211,211,211);
+    background-color: rgb(240, 233, 233);
+    transform: scale(1);
+    transition: color 330ms ease-in-out, transform 330ms ease-in-out;
+    
 }
 
-.contain > .sidediv > .content > ul > li > a:hover {
+.contain > .sidediv > .content > ul > li:hover {
     transform: scale(1.5);
     transition: transform 330ms ease-in-out;
 }

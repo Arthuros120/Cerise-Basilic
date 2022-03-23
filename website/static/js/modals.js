@@ -1,6 +1,7 @@
 const modalBody = document.getElementById('modal-body')
 const modal = document.getElementById("myModal");
 const sc = document.getElementById('sc')
+const buttonTop = document.getElementById('ScrollBtn')
 
 $.ajax({
 
@@ -21,6 +22,8 @@ $.ajax({
             const unite = e.target.getAttribute('data-unite')
             const dispo = e.target.getAttribute('data-dispo')
             const static = e.target.getAttribute('data-static')
+
+            console.log(e.target)
 
             if (dispo == 'True'){
 
@@ -76,12 +79,14 @@ $.ajax({
 
             modal.style.display = "flex";
             sc.style.visibility = "hidden";
+            buttonTop.style.visibility = "hidden"
 
             const button = document.getElementsByClassName("close-button")[0];
 
             button.onclick = function() {
                 modal.style.display = "none";
                 sc.style.visibility = "visible";
+                buttonTop.style.visibility = "visible"
             }
 
         }))
@@ -100,5 +105,6 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
         sc.style.visibility = "visible";
+        buttonTop.style.visibility = "visible"
     }
 }

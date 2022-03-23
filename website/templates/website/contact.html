@@ -9,117 +9,103 @@
 
 {% block content %}
 
-<div class="info">
-    <h2>Addresse : </h2>
-    <p>Rdpt de la Vge Noire, 29600 Morlaix</p>
-    <h2>Horaires : </h2> 
-      <p class="p">
-        Lundi    &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔ &#8232 &#8232
-        09:00 - 19:00 
-      </p>
-      <p class="p">
-        Mardi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 ➔ &#8232 &#8232
-        09:00 - 19:00 
-      </p>
-      <p class="p">
-        Mercredi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔  &#8232 &#8232
-        09:00 - 19:00 
-      </p>
-      <p class="p">
-        Jeudi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔  &#8232 &#8232
-        09:00 - 19:00 
-      </p>
-      <p class="p">
-        Vendredi &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232➔  &#8232 &#8232
-        09:00 - 19:00 
-      </p>
-      <p class="p">
-        Samedi  &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 &#8232 ➔  &#8232 &#8232
-        09:00 - 19:00 
-      </p>
-      <p>
-        Dimanche  &#8232 &#8232 &#8232 &#8232 &#8232  &#8232➔  &#8232 &#8232
-        <span class="rouge">FERMÉ</span>
-      </p>
-    <h2>Téléphone : </h2>
-    <p>02 98 61 06 92</p>
-  </div>
-  <div class="carte">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10555.48730149186!2d-3.830802!3d48.593153!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x51f06c17e20482f1!2sCerise%20et%20basilic%20fruits%20et%20l%C3%A9gumes!5e0!3m2!1sfr!2sfr!4v1647874303015!5m2!1sfr!2sfr" width="800" height="600" style="border:0;padding-top: 150px;" loading="lazy"></iframe>
-  </div>
-  <div class="contact" id="contact">
-    <div class="form-contact">
-      <form class="input-area">
-        <label>Adresse email *</label>
-        <div class="input-content">
-          <input
-            class="input-text input-max"
-            id="email"
-            name="email"
-            required
-            autocomplete="on"
-            autocapitalize="off"
-            placeholder="jeanpierre@orange.fr"
-            type="email"
-            form="contact-formulaire"
-          />
-          <img
-            class="icon icon-input"
-            alt="Icones représentant le status"
-          />
-        </div>
-        <p class="text-input">Hint or Error Message</p>
-      </form>
-      <form class="input-area">
-        <label>Titre du message *</label>
-        <div class="input-content">
-          <input
-            class="input-text input-max"
-            id="title"
-            name="title"
-            required
-            autocomplete="off"
-            autocapitalize="sentences"
-            type="text"
-            placeholder="À propos..."
-            form="contact-formulaire"
-          />
-          <img
-            class="icon icon-input"
-            alt="Icones représentant le status"
-          />
-        </div>
-        <p class="text-input">Hint or Error Message</p>
-      </form>
-      <form class="input-area">
-        <label>Votre message *</label>
-        <div class="input-content">
-          <textarea
-            class="input-text input-max"
-            name="mess"
-            id="mess"
-            autocapitalize="sentences"
-            autocomplete="off"
-            required
-            spellcheck="true"
-            wrap="hard"
-            placeholder="Votre message..."
-            type="text"
-            form="contact-formulaire"
-            style="resize: none;"
-          ></textarea>
-          <img
-            class="icon icon-input"
-            alt="Icones représentant le status"
-          />
-        </div>
-        <p class="text-input">Hint or Error Message</p>
-      </form>
-      <div class="boutton">
-        <input type="submit" class="button primary medium" value="Envoyer" >
+<div class="contain">
+  <div class="grid">
+      <div class="gauche">
+          <div class="content">
+              <h1>NOS HORAIRES</h1>
+              <div class="graphe">
+                  <div>
+                      <p>LUNDI</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p> 09:00 - 19:00 </p>
+                  </div>
+                  <div>
+                      <p>MARDI</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p> 09:00 - 19:00 </p>
+                  </div>
+                  <div>
+                      <p>MERCREDI</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p> 09:00 - 19:00 </p>
+                  </div>
+                  <div>
+                      <p>JEUDI</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p> 09:00 - 19:00 </p>
+                  </div>
+                  <div>
+                      <p>VENDREDI</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p> 09:00 - 19:00 </p>
+                  </div>
+                  <div>
+                      <p>SAMEDI</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p> 09:00 - 19:00 </p>
+                  </div>
+                  <div>
+                      <p>DIMANCHE</p>
+                      <div class="image">
+                          <img src={% static 'img/arrow.svg' %}>
+                      </div>
+                      <p class="red">FERMÉ</p>
+                  </div>
+              </div>
+          </div>
       </div>
-      </form>
-    </div>
+      <div class="droite">
+          <div class="formulaire">
+              <h1>NOUS CONTACTER</h1>
+              <form>
+                  <div>
+                      <label for="name">NOM</label>
+                      <input type="text" id="name" name="user_name">
+                  </div>
+                  <div>
+                      <label for="surname">PRENOM</label>
+                      <input type="text" id="surname" name="user_surname">
+                  </div>
+                  <div>
+                      <label for="mail">ADRESSE MAIL</label>
+                      <input type="email" id="mail" required>
+                  </div>
+                  <div>
+                      <label for="objet">OBJET</label>
+                      <input type="text" id="objet" required>
+                  </div>
+                  <div>
+                      <label for="msg">MESSAGE</label>
+                      <textarea type="textarea" id="msg" required></textarea>
+                  </div>
+                  <div>
+                      <button type="submit">ENVOYER</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
+  <div class="line">
+      <hr>
+  </div>
+
+  <div class="carte">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2638.871641146266!2d-3.8329906840657677!3d48.59315652729885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4811612255e69041%3A0x51f06c17e20482f1!2sCerise%20et%20basilic%20fruits%20et%20l%C3%A9gumes!5e0!3m2!1sfr!2sfr!4v1647893138835!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
 </div>
 
 {% endblock content %}

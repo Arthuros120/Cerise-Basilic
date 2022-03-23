@@ -56,6 +56,12 @@ header > nav  > ul > li > a {
     transition: transform 330ms ease-in-out, color 330ms ease-in-out;
 }
 
+header > nav  > ul > li > a:hover {
+    color: #1EC81B;
+    transform: scale(1.15);
+    transition: transform 330ms ease-in-out, color 330ms ease-in-out;
+}
+
 .logo
 {
     display: flex;
